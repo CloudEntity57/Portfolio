@@ -14,7 +14,7 @@
   },
   "homepage": "http://cloudentity57.github.io",
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy":"npm run build", 
     "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
