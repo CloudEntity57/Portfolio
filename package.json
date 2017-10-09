@@ -7,6 +7,7 @@
     "react-scripts": "1.0.14"
   },
   "dependencies": {
+    "firebase": "^4.5.0",
     "gh-pages": "^1.0.0",
     "jquery": "^3.2.1",
     "react": "^16.0.0",
@@ -14,8 +15,8 @@
   },
   "homepage": "http://cloudentity57.github.io",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
