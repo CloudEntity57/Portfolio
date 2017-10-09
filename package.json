@@ -12,7 +12,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "homepage": "https://cloudentity57.github.io/public",
+  "homepage": "https://cloudentity57.github.io/Portfolio/public",
   "scripts": {
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build",
