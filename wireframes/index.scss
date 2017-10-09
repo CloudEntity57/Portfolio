@@ -1,0 +1,100 @@
+$scale:200px;
+#photo,#photo2 {
+  border-radius: 100%;
+  position: relative;
+  border: 25px solid #496394;
+  width: $scale;
+  height: $scale;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  overflow: hidden;
+}
+#photo{
+  background-image: url("./photos/giverny-4.jpg");
+}
+#photo2{
+  background-color: transparent;
+  position: absolute;
+  transform:rotate(45deg);
+  top:0px;
+  z-index:2;
+}
+
+#photo div, #photo2 div {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: .5;
+  -webkit-transition: -webkit-transform 2.5s;
+}
+#lens1,#lens2{
+  top:0px;
+}
+#lens3,#lens4{
+  bottom:0px;
+}
+#lens1{
+  border-top:$scale solid grey;
+  border-right:$scale solid transparent;
+}
+#lens2{
+  border-top:$scale solid olive;
+  border-left:$scale solid transparent;
+}
+#lens3{
+  border-bottom:$scale solid tomato;
+  border-left:$scale solid transparent;
+}
+#lens4{
+  border-bottom:$scale solid #7a7ef9;
+  border-right:$scale solid transparent;
+}
+.right{
+  -webkit-transform: rotate(90deg) scale(3) translateX($scale);
+  transform:rotate(90deg) scale(3) translateX($scale);
+
+}
+.left{
+  -webkit-transform: rotate(90deg) scale(3) translateX(-$scale);
+  transform:rotate(90deg) scale(3) translateX(-$scale);
+}
+
+.right_close{
+  -webkit-transform: rotate(0deg) scale(1) translateX(0px);
+  transform:rotate(0deg) scale(1) translateX(0px);
+
+}
+.left_close{
+  -webkit-transform: rotate(0deg) scale(1) translateX(0px);
+  transform:rotate(0deg) scale(1) translateX(0px);
+}
+
+
+.revealer{
+  width:803px;
+  height:507px;
+  border:1px solid tomato;
+  position: relative;
+  overflow: hidden;
+}
+.revealed_content{
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+
+.shrinker {
+  display: inline-block;
+  width:20px;
+  height:507px;
+  position: fixed bottom;
+  background-color: black;
+  opacity: .5;
+  -webkit-transition: transform 1s;
+  transition: height 2s;
+}
+
+.shrinking{
+  height:0;
+}

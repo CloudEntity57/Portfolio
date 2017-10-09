@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Josh Foster</title>
+  </head>
+  <link rel="stylesheet" href="./index.css" media="screen" title="no title">
+  <body>
+    <div id="photo">
+      <div id="lens1"></div>
+      <div id="lens2"></div>
+      <div id="lens3"></div>
+      <div id="lens4"></div>
+    </div>
+    <div class="revealer">
+      <div class="revealed_content">
+        <img src="./photos/giverny-4.jpg" alt="monet" />
+      </div>
+    </div>
+    <script type="text/javascript">
+    //REVEALER SCRIPT
+    let revealer = document.getElementsByClassName('revealer')[0];
+    let width = window.getComputedStyle(revealer).width.split('').slice(0,this.length-2).join('');
+    let height = window.getComputedStyle(revealer).height.split('').slice(0,this.length-2).join('');
+    width=parseInt(width);
+    height=parseInt(height);
+    console.log('width: ',width, ' height: ',height);
+    let i=0;
+    while(i <=width){
+      let shrinker = document.createElement('div');
+      shrinker.setAttribute('class','shrinker');
+      const id = 'shrinker'+i;
+      shrinker.setAttribute('id',id);
+      shrinker.addEventListener('mouseenter',reveal);
+      console.log(shrinker);
+      revealer.appendChild(shrinker);
+      i+=20;
+    }
+    function reveal(event){
+      console.log(event.target.id);
+      const id = event.target.id;
+      let elem = document.getElementById(id);
+      let attr = elem.getAttribute('class');
+      attr+=' shrinking';
+      elem.setAttribute('class',attr);
+    }
+    //find center value of width
+    let center = Math.floor(width/2);
+    const setDelay = (j)=>{
+        setTimeout(()=>{
+          let id = 'shrinker'+j;
+          console.log('id=',id);
+          let elem = document.getElementById(id);
+          let attr = elem.getAttribute('class');
+          attr+=' shrinking';
+            elem.setAttribute('class',attr);
+          j+=20;
+          // console.log(j);
+          if(j<=width){
+            setDelay(j);
+            return;
+          }
+        },0);
+    }
+    let j=0;
+    setDelay(j);
+
+
+    // for(let j=0; j<=10; j++){
+    //   let go = false;
+    //   while(go==false){
+    //     let i =setDelay(j).then((val)=>{
+    //       go = val;
+    //       console.log('go: ',go);
+    //     });
+    //   }
+    // }
+    // while(j<width){
+      // let id = 'shrinker'+j;
+      // shrink(id).then((val)=>{
+      //   console.log('finished: ',val);
+      // });
+    //   continue;
+    // }
+  //   do {
+  //     let id = 'shrinker'+j;
+  //     setTimeout(()=>{
+  //       let elem = document.getElementById(id);
+  //       let attr = elem.getAttribute('class');
+  //       attr+=' shrinking';
+  //       elem.setAttribute('class',attr);
+  //       resolve('done');
+  //     },100);
+  //   // Increment variable by 1
+  //     j++;
+  //   console.log(j);
+  // } while (j<=width);
+
+
+
+
+
+    //CIRCLE SCRIPT====================================================
+      const changeClass = (target,classname)=>{
+        document.getElementById(target).setAttribute('class',classname);
+      }
+      const photo = document.getElementById('photo');
+      photo.addEventListener('mouseenter',(event)=>{
+        changeClass('lens1','left');
+        changeClass('lens4','left');
+        changeClass('lens2','right');
+        changeClass('lens3','right');
+      });
+      photo.addEventListener('mouseleave',(event)=>{
+        changeClass('lens1','left_close');
+        changeClass('lens4','left_close');
+        changeClass('lens2','right_close');
+        changeClass('lens3','right_close');
+      });
+    </script>
+  </body>
+</html>

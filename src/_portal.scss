@@ -1,0 +1,143 @@
+
+//PORTAL CIRCLE
+$scale:45px;
+$expand:1.75;
+$expand_speed:.35s;
+// $expand:40;
+// $expand_speed:1s;
+
+.port_photo{
+  border-radius: 100%;
+  position: relative;
+  // border: 25px solid #496394;
+  width: $scale;
+  height: $scale;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  overflow: hidden !important;
+  background-color: transparent;
+  border:1px solid gray;
+  // background-image: url("./photos/giverny-4.jpg");
+  box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+}
+.port_photo_inner{
+  overflow: hidden !important;
+  margin: auto;
+}
+.port_photo div{
+  position: absolute;
+  width: 0px !important;
+  height: 0px !important;
+  -moz-transition: -moz-transform $expand_speed;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+  opacity: .5;
+  clip-path: circle($scale at $scale/2 $scale/2);
+}
+.port_lens1,.port_lens2{
+  top:0px;
+}
+.port_lens3,.port_lens4{
+  bottom:0px;
+}
+.port_lens1,.port_lens2,.port_lens3,.port_lens4{
+}
+.port_lens1{
+  border-top:$scale solid grey;
+  border-right:$scale solid transparent;
+}
+.port_lens2{
+  border-top:$scale solid olive;
+  border-left:$scale solid transparent;
+}
+.port_lens3{
+  border-bottom:$scale solid tomato;
+  border-left:$scale solid transparent;
+}
+.port_lens4{
+  border-bottom:$scale solid #7a7ef9;
+  border-right:$scale solid transparent;
+}
+.port_bigger{
+  -moz-transform: scale($expand);
+  -webkit-transform: scale($expand);
+  transform:scale($expand);
+}
+.port_raised{
+  // display:inline-block !important;
+  -moz-transform: translateY(-$scale/2);
+  -webkit-transform: translateY(-$scale/2);
+  transform:translateY(-$scale/2);
+  color:#fff !important;
+}
+.port_right{
+  -moz-transform: rotate(90deg) scale(3) translateX($scale);
+  -webkit-transform: rotate(90deg) scale(3) translateX($scale);
+  transform:rotate(90deg) scale(3) translateX($scale);
+}
+.port_left{
+  -moz-transform: rotate(90deg) scale(3) translateX(-$scale);
+  -webkit-transform: rotate(90deg) scale(3) translateX(-$scale);
+  transform:rotate(90deg) scale(3) translateX(-$scale);
+}
+.port_circle_float{
+  position:absolute;
+  top:-$scale*2;
+  z-index: 50;
+}
+.port_circle_row{
+  position:relative;
+}
+.port_covered{
+  font-size:.5em;
+}
+.port_circle_logo{
+  // background-image:url("./port_photos/react-logo-1000-transparent.png");
+  width:$scale;
+  height:$scale;
+  background-size: contain;
+  background-position:center;
+}
+.port_brand_title{
+  -moz-transition: -moz-transform $expand_speed;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+  color:transparent;
+  transition-property:color;
+}
+.port_circle_holder{
+  display: flex;
+}
+.port_skills{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.port_skills_title{
+  text-align: center;
+}
+.port_skills:hover{
+  width:100%;
+  overflow:visible;
+}
+.port_brand_logo{
+  width:$scale;
+  height:$scale;
+  padding:$scale/5.5;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+.portals{
+  padding:15px 0px;
+  display:flex;
+  flex-direction: row !important;
+  justify-content: space-around;
+  width:25vw;
+  margin:auto;
+}

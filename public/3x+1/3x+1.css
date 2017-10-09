@@ -1,0 +1,99 @@
+#graph{
+   background-color:lightgray;
+   align-content: center;
+   border-radius: 15px;
+   padding-top:1em;
+}
+body{
+  background-color: #64868e;
+  color:#e8e6e6;
+}
+header{
+  position:fixed;
+  top:0;
+  height:100vh;
+  width:100%;
+  z-index: -1;
+  background-image:url("http://orig11.deviantart.net/5848/f/2011/055/e/e/cllouds_and_clouds_2_by_kalosys_stock-d3ac6gz.jpg");
+  background-size: cover;
+  background-color: tomato;
+}
+main{
+  margin-top:25px;
+}
+.fa-ravelry{
+  margin-right:10px;
+}
+.opaque{
+  position:fixed;
+  top:0;
+  height:100vh;
+  width:100%;
+  z-index: -1;
+  background-color:black;
+  opacity:.3;
+}
+.bar,.bar2{
+   display:inline-block;
+   background-color:deepskyblue;
+
+   border-radius: 15px;
+   margin-right:2px;
+   margin-bottom:.5em;
+}
+.bar{
+  width:3.5px;
+}
+.bar2{
+  width:8px;
+}
+#buffer{
+  height:30px;
+}
+#summary{
+  color:black;
+  padding:1em;
+  border-radius: 15px;
+  margin-top:1em;
+}
+.lead{
+  background-color: lightgrey;
+}
+.title{
+  margin-top:50px;
+  font-size: 3em;
+}
+.input_label{
+  font-size: 1.25em;
+}
+.strong{
+  font-size:2em;
+}
+.main-form{
+  float:right;
+  width:45%;
+  margin-left:25px;
+}
+.success-msg{
+  margin-bottom:25px;
+}
+#tag{
+  display:block;
+  background-color:white;
+  height:30px;
+}
+#height{
+  position: fixed;
+  color:black;
+  background-color: beige;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 5px;
+}
+.back-btn{
+  margin-left: 1em;
+}
+.main-form input, .main-form button{
+  margin:.5em 0em;
+}

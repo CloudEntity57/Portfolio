@@ -1,0 +1,24 @@
+{
+  "name": "Portfolio_2017",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "react-scripts": "1.0.14"
+  },
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "jquery": "^3.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "homepage": "http://cloudentity57.github.io",
+  "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

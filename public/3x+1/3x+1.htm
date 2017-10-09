@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3x + 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="Bootstrap" charset="utf-8" />
+        <link rel="stylesheet" href="./3x+1.css" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <header>
+    </header>
+    <section class="opaque">
+    </section>
+    <wrap>
+
+        <main>
+            <div class="container">
+
+              <div class="row">
+                  <div class="col-sm-12">
+                    <div class="">
+                      <span class="fa fa-ravelry fa-3x fa-fw"></span><span class="title">The 3n + 1 Problem</span>
+                    </div>
+                    <h3>"Mathematics may not be ready for such problems..." </h3>
+                    <h4>($500 prize)</h4>
+                  </div>
+
+                <div class="col-sm-12">
+                  <div id="summary" class="lead">
+                    <form action="#" type="get" class="main-form form form-default">
+                      <div class="input_label">See if you can solve the 3n+1 problem! Enter an integer, and every number from 1 to that integer will be tested.</div>
+                      <input type="text" name="lines" id="lines_desired" class="form input form-control" placeholder="Enter an integer">
+                      <button onclick="graph()" class="btn btn-success" name="lines">Enter</button>
+                    </form>
+                    <p>
+                      <span class="strong">
+                        The conjecture
+                      </span> can be summarized as follows. Take any positive integer n. If n is even, divide it by 2 to get n / 2. If n is odd, multiply it by 3 and add 1 to obtain 3n + 1. Repeat the process (which has been called "Half Or Triple Plus One", or HOTPO) indefinitely. The conjecture is that no matter what number you start with, you will always eventually reach 1.
+                      Paul Erdős said about the Collatz conjecture: "Mathematics may not be ready for such problems." He also offered $500 for its solution. Jeffrey Lagarias in 2010 claimed that based only on known information about this problem, "this is an extraordinarily difficult problem, completely out of reach of present day mathematics." - Wikipedia
+                    </p>
+                  </div>
+
+                </div>
+                <div id="lines_wanted"></div>
+              </div>
+
+              <div class="row bars hidden">
+              <div class="col-sm-12" id="graph" style="display:block">
+                  <div class="row" id="buffer"></div>
+                  </div>
+              </div>
+            </div>
+        </main>
+    </wrap>
+    <footer>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <script src="./3x+1.js"></script>
+</html>

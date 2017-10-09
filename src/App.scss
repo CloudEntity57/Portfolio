@@ -1,0 +1,314 @@
+@import "portal";
+//CIRCLE
+@import "circle";
+
+// existing styles
+
+#portfolio{
+  padding-top:35px;
+}
+.portfolio-image{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: top center;
+  transition:transform .5s;
+  transition-property:background-image;
+  border-radius: 8px;
+}
+.portfolio-image-wrapper{
+  position:relative;
+  width:50%;
+  // height:50vh;
+  margin:auto;
+  @media(max-width:560px){
+    width:90%;
+  }
+}
+.portfolio-image-opacity{
+  height:0%;
+  width: 100% !important;
+  background-color:gray;
+  z-index: 20;
+  opacity: .5;
+  position:absolute;
+}
+.image-ratio{
+  padding-bottom:65%;
+}
+// .circle_row::after{
+//   height:20vh;
+//   position: absolute;
+//   // background-color:#fff;
+//   width:100vw;
+// }
+
+body{
+  background-color: #9695a2;
+}
+
+.main_name{
+  font-size:2.5em;
+}
+.main_name_subtitle{
+  font-size:1.5em;
+}
+
+.navbar{
+    height:110px;
+    padding-top:25px;
+    margin-bottom:0px;
+}
+.navbar-nav>li>a{
+  font-size:1.5em !important;
+  text-align: right;
+}
+.navbar-brand{
+    color:white;
+    font-size: 40px;
+}
+
+.navbar-default{
+  background-color: #222;
+}
+.navbar-nav{
+  // width:50vw;
+  // float:right;
+}
+
+.title-bar{
+    // background-image:url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1476122287/IMG_6375-compressed_eruuiy.jpg");
+    // background-image:url("./photos/IMG_7975.JPG");
+    // background-image:url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/a_auto_right/v1490335359/IMG_9417_mzqos1.jpg");
+    // background-attachment: fixed;
+    // background-size:cover;
+    // background-position: 25vh 25vw;
+    // background-repeat: no-repeat;
+}
+.parallax {
+  // height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-size: cover;
+  @media(max-width: 765px){
+    background-position:top 70% 70%;
+  }
+}
+.title-text a{
+  text-decoration: none;
+  color:white;
+}
+.title-opacity{
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background-color:black;
+  opacity:.3;
+  z-index: 1;
+  height:100vh;
+}
+.title-bkg{
+}
+.title-bar{
+  height: 100vh;
+}
+.title-text{
+  padding:30px;
+  position:absolute;
+  width:100%;
+  top:110px;
+  z-index: 2;
+}
+
+.title-text .col-sm-12{
+    text-align: right;
+    color: white;
+}
+.lead.col-sm-12 span{
+  color:#ffc0c0;
+}
+
+.title-text img{
+    transform: rotate(180deg);
+}
+
+.portfolio{
+    // background-color:lightgrey;
+    margin-bottom: 0px;
+}
+// .portfolio-entry{
+//   &:hover{
+//     background-color:gray;
+//   }
+// }
+
+.portfolio-entry a{
+    text-decoration: none;
+    color:#333;
+    // width:auto;
+}
+.portfolio-entry{
+  text-align: center;
+}
+
+
+.portfolio-text{
+  margin:0em 3em;
+  font-size:1em;
+  min-height:15vh;
+}
+.portfolio-title{
+  margin:10px 0px;
+  font-size:1.35em;
+}
+
+.fa-cogs{
+    margin:2em 0em;
+}
+
+.portfolio_name, .portfolio_contact{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size:2em;
+}
+.intro_bar{
+  background-color:#fff;
+  height:30vh;
+  // background-image:url('./photos/giverny-4.jpg');
+  // background-position: absolute;
+  // top:0px;
+  // background-size:cover;
+}
+.links,.contact{
+    border-bottom: 3px solid darkgrey;
+    margin-bottom:15px;
+}
+.links{
+  // border-top: 5px solid #d28628;
+}
+
+.link{
+    text-align: center;
+    padding:0px 20px 20px 20px;
+}
+
+.contact .lead{
+    padding:0px 35px 20px 35px;
+}
+
+#contact{
+  padding-top:50px;
+}
+
+.link-title{
+    text-decoration: none;
+    color:gray;
+    font-size: .75em;
+    padding-bottom:.5em;
+}
+
+/*--Footer Styles---*/
+
+.nav-footer{
+    height:75px;
+    background-color: rgb(34,34,34);
+    color:#9d9d9d;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom:0px;
+}
+.nav-footer ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 16px;
+}
+.nav-footer a, .nav-footer li{
+    text-decoration: none;
+    color: inherit;
+    transition:color .4s;
+}
+.nav-footer li:hover{
+    color:white;
+}
+
+@media (min-width: 568px) {
+    .title-text .col-sm-8, .title-text .col-sm-8 div{
+      text-align: right;
+    }
+    .title-text .col-xs-8{
+      font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+  .portfolio-text{
+    margin:0em 3.5em;
+    font-size: 1em;
+  }
+}
+
+/* Heliowire styles */
+.glyphicon{
+    color:orange;
+}
+
+.mainlogo{
+    size:150%;
+}
+.maintitle{
+    display:block;
+}
+
+//Fibonacci study
+$square_size:250px;
+.fib_curve{
+  border-radius: 100% 0% 0% 0%;
+  background-color:#9a7474;
+  // background-color: #fff;
+  border:1px solid #000;
+}
+.fib_holder{
+  // margin:150px 100px;
+  text-align: center;
+}
+.fib_rectangle{
+  border-top:1px solid #000;
+  border-left:1px solid #000;
+  position: relative;
+  background-color:gray;
+}
+.fib_90deg_holder{
+  position: absolute;
+  right:0px;
+  top:0px;
+}
+.fib_90deg{
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+  position: relative;
+}
+.rotator{
+  // transition:easeOutBounce 2s;
+}
+.inner_fib_holder{
+  position:absolute;
+}
+.square{
+  height:100%;
+  width:100%;
+  // border:1px solid #000;
+}
+.square-wrapper{
+  position: relative;
+}

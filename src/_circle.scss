@@ -1,0 +1,132 @@
+$scale:75px;
+$expand:2;
+$expand_speed:2s;
+
+.photo,.photo2{
+  border-radius: 100%;
+  position: relative;
+  // border: 25px solid #496394;
+  width: $scale;
+  height: $scale;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  overflow: hidden !important;
+  background-color: transparent;
+  background-image: url("./photos/giverny-4.jpg");
+  box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+}
+.photo_inner{
+  overflow: hidden !important;
+  margin: auto;
+}
+.photo div, .photo2 div{
+  position: absolute;
+  width: 0px !important;
+  height: 0px !important;
+  -moz-transition: -moz-transform $expand_speed;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+  opacity: .5;
+  clip-path: circle($scale at $scale/2 $scale/2);
+}
+.lens1,.lens2{
+  top:0px;
+}
+.lens3,.lens4{
+  bottom:0px;
+}
+.lens1,.lens2,.lens3,.lens4{
+}
+.lens1{
+  border-top:$scale solid grey;
+  border-right:$scale solid transparent;
+}
+.lens2{
+  border-top:$scale solid olive;
+  border-left:$scale solid transparent;
+}
+.lens3{
+  border-bottom:$scale solid tomato;
+  border-left:$scale solid transparent;
+}
+.lens4{
+  border-bottom:$scale solid #7a7ef9;
+  border-right:$scale solid transparent;
+}
+.bigger{
+  -moz-transform: scale($expand);
+  -webkit-transform: scale($expand);
+  transform:scale($expand);
+}
+.raised{
+  // display:inline-block !important;
+  -webkit-transform: translateY(-$scale/2);
+  -moz-transform: translateY(-$scale/2);
+  transform:translateY(-$scale/2);
+  color:#fff !important;
+}
+.right{
+  -moz-transform: rotate(90deg) scale(3) translateX($scale);
+  -webkit-transform: rotate(90deg) scale(3) translateX($scale);
+  transform:rotate(90deg) scale(3) translateX($scale);
+}
+.left{
+  -moz-transform: rotate(90deg) scale(3) translateX(-$scale);
+  -webkit-transform: rotate(90deg) scale(3) translateX(-$scale);
+  transform:rotate(90deg) scale(3) translateX(-$scale);
+}
+.circle_float{
+  position:absolute;
+  top:-$scale*2.35;
+  z-index: 50;
+}
+.circle_row{
+  position:relative;
+}
+.covered{
+  font-size:.5em;
+}
+.circle_logo{
+  // background-image:url("./photos/react-logo-1000-transparent.png");
+  width:$scale;
+  height:$scale;
+  background-size: contain;
+  background-position:center;
+}
+.brand_title{
+  -moz-transition: -moz-transform $expand_speed;
+  -webkit-transition: -webkit-transform $expand_speed;
+  transition: transform $expand_speed;
+  color:transparent;
+  -moz-transition-property:color;
+  -webkit-transition-property:color;
+  transition-property:color;
+}
+.circle_holder{
+  display: flex;
+}
+.skills{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.skills_title{
+  text-align: center;
+}
+.skills:hover{
+  width:100%;
+  overflow:visible;
+}
+.brand_logo{
+  width:$scale;
+  height:$scale;
+  padding:$scale/5.5;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
