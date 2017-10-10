@@ -66,23 +66,19 @@
   transform: scale(1.75);
 }
 
+@media (max-width: 568px) {
+  .port_bigger {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .port_raised {
   -moz-transform: translateY(-22.5px);
   -webkit-transform: translateY(-22.5px);
   transform: translateY(-22.5px);
   color: #fff !important;
-}
-
-.port_right {
-  -moz-transform: rotate(90deg) scale(3) translateX(45px);
-  -webkit-transform: rotate(90deg) scale(3) translateX(45px);
-  transform: rotate(90deg) scale(3) translateX(45px);
-}
-
-.port_left {
-  -moz-transform: rotate(90deg) scale(3) translateX(-45px);
-  -webkit-transform: rotate(90deg) scale(3) translateX(-45px);
-  transform: rotate(90deg) scale(3) translateX(-45px);
 }
 
 .port_circle_float {
@@ -161,7 +157,7 @@
   background-color: #fff;
   overflow: hidden !important;
   background-color: transparent;
-  background-image: url("./photos/giverny-4.jpg");
+  background-image: url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_350/v1507589711/giverny-4_zbet5n.jpg");
   box-sizing: content-box !important;
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
@@ -191,6 +187,12 @@
 
 .lens3, .lens4 {
   bottom: 0px;
+}
+
+@media (max-width: 568px) {
+  .lens1, .lens2, .lens3, .lens4 {
+    display: none;
+  }
 }
 
 .lens1 {
@@ -376,12 +378,6 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (max-width: 765px) {
-  .parallax {
-    background-position: top 70% 70%;
-  }
 }
 
 .title-text a {

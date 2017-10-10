@@ -11,10 +11,10 @@ export const links = [
         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507433252/DC_9_pxdm4t.png"
       ],
       big_images:[
-        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1501533478/DC_6_irbfjo.png",
-        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507415780/DC_7_udtxel.png",
-        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507415852/DC_8_vube09.png",
-        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507433252/DC_9_pxdm4t.png"
+        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1501533478/DC_6_irbfjo.png",
+        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507415780/DC_7_udtxel.png",
+        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507415852/DC_8_vube09.png",
+        "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507433252/DC_9_pxdm4t.png"
       ],
       text:[
         "Full stack real estate search app - uses React/Express stack.",
@@ -36,12 +36,12 @@ export const links = [
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507569911/SmartSet4_iridi9.png"
        ],
        big_images:[
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507569883/SmartSet0_aqegmh.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507576994/SmartSet6_tqmcic.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507569890/SmartSet2_otvzjs.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507569887/SmartSet1_wnm6d7.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507569898/SmartSet3_wn9zqm.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507569911/SmartSet4_iridi9.png"
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507569883/SmartSet0_aqegmh.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507576994/SmartSet6_tqmcic.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507569890/SmartSet2_otvzjs.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507569887/SmartSet1_wnm6d7.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507569898/SmartSet3_wn9zqm.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507569911/SmartSet4_iridi9.png"
        ],
        text:[
          "Project in React.js and Firebase that stores a user's songs and automatically generates performances of different lengths and set numbers, according to desired genres.",
@@ -57,16 +57,16 @@ export const links = [
        url:"https://couchpolitics.herokuapp.com/",
        title: "Cloudergy",
        images:[
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,h_140/v1507576324/Cloudergy5_gkbzoi.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507576324/Cloudergy5_gkbzoi.png",
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507575977/Cloudergy2_ashrl5.png",
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507575981/Cloudergy3_pjiafk.png",
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507575984/Cloudergy4_o09zzy.png"
    ],
        big_images:[
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,h_750/v1507576324/Cloudergy5_gkbzoi.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507575977/Cloudergy2_ashrl5.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507575981/Cloudergy3_pjiafk.png",
-         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1507575984/Cloudergy4_o09zzy.png"
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_500/v1507576324/Cloudergy5_gkbzoi.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507575977/Cloudergy2_ashrl5.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507575981/Cloudergy3_pjiafk.png",
+         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_700/v1507575984/Cloudergy4_o09zzy.png"
        ],
        text:[
          "Full stack Facebook 'clone' built w React/Redux + Node/Express. Imitates core Facebook functionality. User posts, comments, likes, pages, friend-making. Also filter newsfeed by liberal/conservative. With link sharing, privacy settings and more.",

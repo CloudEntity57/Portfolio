@@ -23,7 +23,6 @@
 .portfolio-image-wrapper{
   position:relative;
   width:50%;
-  // height:50vh;
   margin:auto;
   @media(max-width:560px){
     width:90%;
@@ -93,10 +92,9 @@ body{
   // height: 600px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
   background-size: cover;
   @media(max-width: 765px){
-    background-position:top 70% 70%;
+    // background-position:top 70% 70%;
   }
 }
 .title-text a{

@@ -67,6 +67,11 @@ $expand_speed:.35s;
   -moz-transform: scale($expand);
   -webkit-transform: scale($expand);
   transform:scale($expand);
+  @media(max-width: 568px){
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform:scale(1);
+  }
 }
 .port_raised{
   // display:inline-block !important;
@@ -74,16 +79,6 @@ $expand_speed:.35s;
   -webkit-transform: translateY(-$scale/2);
   transform:translateY(-$scale/2);
   color:#fff !important;
-}
-.port_right{
-  -moz-transform: rotate(90deg) scale(3) translateX($scale);
-  -webkit-transform: rotate(90deg) scale(3) translateX($scale);
-  transform:rotate(90deg) scale(3) translateX($scale);
-}
-.port_left{
-  -moz-transform: rotate(90deg) scale(3) translateX(-$scale);
-  -webkit-transform: rotate(90deg) scale(3) translateX(-$scale);
-  transform:rotate(90deg) scale(3) translateX(-$scale);
 }
 .port_circle_float{
   position:absolute;

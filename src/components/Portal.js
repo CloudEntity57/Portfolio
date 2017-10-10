@@ -10,6 +10,11 @@ export default class Portal extends Component{
       open:false
     }
   }
+  componentWillReceiveProps(nextProps){
+    // if(nextProps.closeAll==true){
+    //   this.closeLens();
+    // }
+  }
   componentDidMount(){
     const url = this.props.url;
     const id = '#'+this.props.brand;
@@ -17,7 +22,7 @@ export default class Portal extends Component{
     const style = 'url("'+url+'")';
     jquery(id).css('background-image',style);
   }
-  openLens(e){
+  openLens(){
     const id = '#'+this.props.brand;
     const $port_photo = jquery(id);
     const brand_class = '.'+this.props.brand;
@@ -25,7 +30,7 @@ export default class Portal extends Component{
     $port_photo.addClass('port_bigger');
     this.props.changeView(this.props.count);
   }
-  closeLens(e){
+  closeLens(){
     const id = '#'+this.props.brand;
     const $port_photo = jquery(id);
     const brand_class = '.'+this.props.brand;

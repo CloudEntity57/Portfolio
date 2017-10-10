@@ -13,7 +13,7 @@ $expand_speed:2s;
   background-color: #fff;
   overflow: hidden !important;
   background-color: transparent;
-  background-image: url("./photos/giverny-4.jpg");
+  background-image: url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_350/v1507589711/giverny-4_zbet5n.jpg");
   box-sizing: content-box !important;
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
@@ -41,6 +41,9 @@ $expand_speed:2s;
   bottom:0px;
 }
 .lens1,.lens2,.lens3,.lens4{
+  @media(max-width: 568px){
+    display: none;
+  }
 }
 .lens1{
   border-top:$scale solid grey;

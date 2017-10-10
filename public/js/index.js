@@ -10,7 +10,7 @@ $(".title-text li").click(function(){
 //add parallax to scrolling title image:
 $('.title-bar').parallax(
   {
-    imageSrc: "../photos/IMG_7975.JPG",
+    imageSrc: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_1500/v1507588997/Josh_eclipse_olovsk.jpg",
     positionY:"50vh"
   }
 );
