@@ -84,9 +84,9 @@ class Circle extends Component{
     const brand_class = "covered brand_title "+this.props.brand;
     const brand_id = this.props.brand+'1';
     return(
-      <div className="circle">
+      <div className="circle clearfix">
         <div className={ brand_class }>{this.props.brand}</div>
-        <div className="circle_holder">
+        <div className="circle_holder clearfix">
           <div onMouseEnter={this.openLensTrigger.bind(this)} onMouseLeave={this.closeLens.bind(this)} id={brand_id} className="photo photo_inner">
             <img src={url} alt="brand_logo" className="brand_logo img-responsive" />
             <div className="lens1"></div>

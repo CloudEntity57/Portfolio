@@ -18,6 +18,7 @@ $expand_speed:.35s;
   overflow: hidden !important;
   background-color: transparent;
   border:1px solid gray;
+  cursor: pointer;
   // background-image: url("./photos/giverny-4.jpg");
   box-sizing: content-box !important;
   -webkit-box-sizing: content-box !important;
@@ -67,11 +68,11 @@ $expand_speed:.35s;
   -moz-transform: scale($expand);
   -webkit-transform: scale($expand);
   transform:scale($expand);
-  @media(max-width: 568px){
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform:scale(1);
-  }
+  // @media(max-width: 568px){
+  //   -moz-transform: scale(1);
+  //   -webkit-transform: scale(1);
+  //   transform:scale(1);
+  // }
 }
 .port_raised{
   // display:inline-block !important;

@@ -1,6 +1,9 @@
-$scale:75px;
+$scale:2em;
 $expand:2;
 $expand_speed:2s;
+// @media(max-width:565px){
+//   $scale:15px;
+// }
 
 .photo,.photo2{
   border-radius: 100%;
@@ -87,6 +90,17 @@ $expand_speed:2s;
   position:absolute;
   top:-$scale*2.35;
   z-index: 50;
+  @media(max-width: 565px){
+    top:-$scale*5;
+    margin-top:-450px !important;
+    // z-index: 5000;
+  }
+}
+.circle{
+
+  @media(max-width: 565px){
+    width:25%;
+  }
 }
 .circle_row{
   position:relative;
@@ -116,7 +130,10 @@ $expand_speed:2s;
 .skills{
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
+  @media(max-width: 565px){
+    flex-direction: column;
+  }
 }
 .skills_title{
   text-align: center;
