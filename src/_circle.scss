@@ -1,6 +1,6 @@
 $scale:2em;
-$expand:2;
-$expand_speed:2s;
+$expand:1.5;
+$expand_speed:1.25s;
 // @media(max-width:565px){
 //   $scale:15px;
 // }
@@ -123,6 +123,7 @@ $expand_speed:2s;
   -moz-transition-property:color;
   -webkit-transition-property:color;
   transition-property:color;
+  font-family: 'Ubuntu',sans-serif;
 }
 .circle_holder{
   display: flex;

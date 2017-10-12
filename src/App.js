@@ -37,7 +37,7 @@ class App extends Component {
         if(count>skills.length-1){
           count=0;
         }
-      },2500);
+      },1700);
     });
   }
   timeout(time){
@@ -109,8 +109,9 @@ class App extends Component {
     }
     let num=0;
     const projects = links.map((proj)=>{
+      const key = 'project'+num;
       num++;
-      return <Project number={num} project={proj} />
+      return <Project key={key} number={num} project={proj} />
     });
     return (
       <div id="top" >

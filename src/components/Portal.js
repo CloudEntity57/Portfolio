@@ -18,7 +18,6 @@ export default class Portal extends Component{
   componentDidMount(){
     const url = this.props.url;
     const id = '#'+this.props.brand;
-    console.log('portal id: ',id);
     const style = 'url("'+url+'")';
     jquery(id).css('background-image',style);
   }

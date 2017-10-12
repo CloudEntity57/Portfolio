@@ -57,7 +57,9 @@ class Circle extends Component{
     const $lens3 = $photo.children('.lens3');
     const $lens4 = $photo.children('.lens4');
     const brand_class = '.'+this.props.brand;
-    jquery(brand_class).removeClass('raised');
+    setTimeout(()=>{
+      jquery(brand_class).removeClass('raised');
+    },425)
     $photo.removeClass('bigger');
     if(this.props.lens==true){
       $lens1.removeClass('left');

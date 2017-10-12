@@ -69,10 +69,40 @@
 .portfolio-image-opacity{
   height:0%;
   width: 100% !important;
-  background-color:gray;
+  background-color:black;
   z-index: 20;
   opacity: .5;
   position:absolute;
+  transition-property:height;
+  -webkit-transition-property:height;
+  -moz-transition-property:height;
+  transition:all .55s;
+  -webkit-transition:all .55s;
+  -moz-transition:all .55s;
+}
+.portfolio-opacity-animated{
+  height:100%;
+}
+.visit_site{
+  color:white;
+  opacity: 0;
+  text-align: center;
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 1.2em;
+  margin:auto;
+  position: absolute;
+  bottom:45%;
+  left:35%;
+  z-index: 500000;
+  transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition:all .35s;
+  -webkit-transition:all .35s;
+  -moz-transition:all .35s;
+}
+.visible{
+  opacity: 1;
 }
 .image-ratio{
   padding-bottom:65%;
