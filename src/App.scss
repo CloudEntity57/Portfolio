@@ -3,7 +3,9 @@
 @import "circle";
 
 // existing styles
-
+// html{
+//   background-color:#222;
+// }
 #portfolio{
   padding-top:35px;
 }
@@ -47,6 +49,7 @@
 }
 .portfolio-image{
   position:absolute;
+  overflow: hidden;
   top:0;
   bottom:0;
   left:0;
@@ -60,7 +63,7 @@
 }
 .portfolio-image-wrapper{
   position:relative;
-  width:50%;
+  width:40%;
   margin:auto;
   @media(max-width:560px){
     width:90%;
@@ -73,6 +76,7 @@
   z-index: 20;
   opacity: .5;
   position:absolute;
+  border-radius: 8px;
   transition-property:height;
   -webkit-transition-property:height;
   -moz-transition-property:height;
@@ -116,6 +120,7 @@
 
 body{
   background-color: #9695a2;
+  // color:white;
 }
 
 .main_name{
@@ -249,19 +254,34 @@ body{
     font-size:2em;
 }
 .intro_bar{
-  background-color:#fff;
-  height:30vh;
-  // background-image:url('./photos/giverny-4.jpg');
-  // background-position: absolute;
-  // top:0px;
-  // background-size:cover;
+  background-image:url("http://orig11.deviantart.net/5848/f/2011/055/e/e/cllouds_and_clouds_2_by_kalosys_stock-d3ac6gz.jpg");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  // top:495px;
+  height:40vh;
+  width:100vw;
+  z-index: -100000;
+  background-color:lightgrey;
+  text-align: center;
+}
+.contact_me{
+  width:10em;
+  height:5em;
+  border:1px solid #000;
+  padding:1.5em;
+  display:inline-block;
+  margin-top:3.5em;
+  border-radius:50px;
+  cursor: pointer !important;
 }
 .links,.contact{
-    border-bottom: 3px solid darkgrey;
+    // border-bottom: 3px solid darkgrey;
     margin-bottom:15px;
 }
 .links{
   // border-top: 5px solid #d28628;
+  // margin-top:30vh;
 }
 
 .link{
@@ -294,6 +314,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     margin-bottom:0px;
+    width:100vw;
 }
 .nav-footer ul{
     display:flex;
@@ -381,4 +402,16 @@ $square_size:250px;
 }
 .square-wrapper{
   position: relative;
+}
+.divider1_wrapper{
+  height:5vh;
+  width:100%;
+  overflow: hidden;
+  margin-bottom:3em;
+}
+.divider_1{
+  height:5vh;
+  width:100%;
+  background-position: center;
+  background-size: cover;
 }

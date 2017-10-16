@@ -31,9 +31,7 @@ export default class Project extends Component{
     const visit_site = this.refs.visit_site;
     if(this.state.opacity==false){
       jquery(opacity).addClass('portfolio-opacity-animated');
-      setTimeout(()=>{
-        jquery(visit_site).addClass('visible');
-      },350);
+      jquery(visit_site).addClass('visible');
       this.setState({
         opacity:true
       })
@@ -69,7 +67,7 @@ export default class Project extends Component{
         <div className='link-title'></div>
           <div className="portfolio-image-wrapper">
             <div className="image-ratio">
-              <a ref='image_link' onMouseEnter={this.showOpacity.bind(this)} onMouseLeave={this.showOpacity.bind(this)} href = {this.props.project.url} title = {this.props.project.title}>
+              <a ref='image_link' target='blank' onMouseEnter={this.showOpacity.bind(this)} onMouseLeave={this.showOpacity.bind(this)} href = {this.props.project.url} title = {this.props.project.title}>
                 <div ref="opacity" className="portfolio-image-opacity"></div>
                 <div className="visit_site" ref="visit_site">VISIT SITE</div>
                 <div ref="image" className = 'portfolio-image' style ={main_image} alt={this.props.project.title}></div>

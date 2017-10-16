@@ -24,6 +24,26 @@ class App extends Component {
   }
   componentDidMount(){
     this.startScroll(250);
+//     jquery.fn.followTo = function (pos) {
+//     var $this = this,
+//         $window = jquery(window);
+//
+//     $window.scroll(function (e) {
+//         if ($window.scrollTop() > pos) {
+//             $this.css({
+//                 position: 'absolute',
+//                 top: pos*2
+//             });
+//         } else {
+//             $this.css({
+//                 position: 'fixed',
+//                 top: $window.scrollTop()
+//             });
+//         }
+//     });
+// };
+//
+// jquery('#intro_bar').followTo(354);
   }
   startScroll(time){
     let skills = [
@@ -108,11 +128,22 @@ class App extends Component {
       lens:this.state.lens
     }
     let num=0;
+    const divider = (
+      <div className="divider1_wrapper">
+        <div className="divider_1"></div>
+      </div>
+    )
     const projects = links.map((proj)=>{
       const key = 'project'+num;
       num++;
-      return <Project key={key} number={num} project={proj} />
+      return (
+        <div>
+      <Project key={key} number={num} project={proj} />
+
+        </div>
+      );
     });
+    // projects.splice(2,0,divider);
     return (
       <div id="top" >
         <nav className="navbar navbar-fixed-top navbar-inverse">
@@ -147,7 +178,7 @@ class App extends Component {
             <div className="row">
               <div className="lead col-sm-12">
                 <div className="main_name">Josh Foster</div>
-                <div className="main_name_subtitle"><a href="#portfolio">Web Developer </a><span>|</span> Designer <span>|</span> Eclipse Chaser</div>
+                <div className="main_name_subtitle"><a href="#portfolio">Web Developer </a><span>|</span> Designer </div>
               </div>
             </div>
           </div>
@@ -168,22 +199,23 @@ class App extends Component {
             </div>
           </div>
         </div>
-
-        {/* <div className="intro_bar">
+{/*
+        <div id='intro_bar' className="intro_bar">
           <div className="container">
             <h1>
-              Perfect websites. Every time.
+              Let's work together
             </h1>
+            <div className="contact_me">Contact Me</div>
           </div>
         </div> */}
-        <div className="portfolio container lead" id="portfolio">
-            <div className="row circle_row">
-            <div className="links col-xs-12">
+        <div className="portfolio  lead" id="portfolio">
+            <div className=" circle_row">
+            <div className="links ">
               <div className="portfolio_name col-xs-12">
 
               </div>
-              <div className="insert row">
-              </div>
+              {/* <div className="insert row">
+              </div> */}
               <div className="portfolio_name col-xs-12">
               </div>
               {/* links here */}

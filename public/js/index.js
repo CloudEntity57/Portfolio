@@ -10,8 +10,13 @@ $(".title-text li").click(function(){
 //add parallax to scrolling title image:
 $('.title-bar').parallax(
   {
-    imageSrc: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_1500/v1507588997/Josh_eclipse_olovsk.jpg",
-    positionY:"50vh"
+    imageSrc: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_1150/v1508174464/IMG_8200_pcg9nh.jpg",
+    positionY:"-75vh"
+  }
+);
+$('.divider_1').parallax(
+  {
+    imageSrc: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1507927559/sunset_monet_w0oo1f.jpg"
   }
 );
 $(".navbar li").hover(function(){
@@ -36,3 +41,22 @@ $('a').on('click',function(e){
         };
 
     });
+
+(()=>{
+  window.addEventListener('resize',()=>{
+    // console.log('width: ',window.innerWidth);
+    // console.log('height: ',window.innerHeight);
+    // let width=window.innerWidth;
+    // let height=window.innerHeight;
+    // if(width/height>1.618 && width/height<1.619){
+    //   console.log("It's the Golden Ratio!!");
+    // }else{
+    //   console.log(width/height);
+    // }
+    // let bodyHTML = document.body.innerHTML;
+    // bodyHTML.innerHTML+=('<div>'+window.innerWidth+'</div>');
+  });
+  window.addEventListener('scroll',()=>{
+    console.log($(window).scrollTop());
+  })
+})();
