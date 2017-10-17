@@ -69,7 +69,7 @@ export default class Project extends Component{
             <div className="image-ratio">
               <a ref='image_link' target='blank' onMouseEnter={this.showOpacity.bind(this)} onMouseLeave={this.showOpacity.bind(this)} href = {this.props.project.url} title = {this.props.project.title}>
                 <div ref="opacity" className="portfolio-image-opacity"></div>
-                <div className="visit_site" ref="visit_site">VISIT SITE</div>
+                <div className="visit_site" ref="visit_site">VISIT</div>
                 <div ref="image" className = 'portfolio-image' style ={main_image} alt={this.props.project.title}></div>
               </a>
             </div>

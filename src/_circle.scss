@@ -1,6 +1,6 @@
 $scale:2em;
 $expand:1.5;
-$expand_speed:1.25s;
+$expand_speed:.25s;
 // @media(max-width:565px){
 //   $scale:15px;
 // }
@@ -11,6 +11,7 @@ $expand_speed:1.25s;
   // border: 25px solid #496394;
   width: $scale;
   height: $scale;
+  display:none;
   background-position: center;
   background-size: cover;
   background-color: #fff;
@@ -21,7 +22,11 @@ $expand_speed:1.25s;
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
   -webkit-transition: -webkit-transform $expand_speed;
-  transition: transform $expand_speed;
+  transition: all $expand_speed;
+}
+.showing{
+  display:block;
+  transition: all $expand_speed;
 }
 .photo_inner{
   overflow: hidden !important;
@@ -71,9 +76,9 @@ $expand_speed:1.25s;
 }
 .raised{
   // display:inline-block !important;
-  -webkit-transform: translateY(-$scale/2);
-  -moz-transform: translateY(-$scale/2);
-  transform:translateY(-$scale/2);
+  // -webkit-transform: translateY(-$scale/2);
+  // -moz-transform: translateY(-$scale/2);
+  // transform:translateY(-$scale/2);
   color:#fff !important;
 }
 .right{
@@ -88,8 +93,8 @@ $expand_speed:1.25s;
 }
 .circle_float{
   position:absolute;
-  top:-$scale*2.35;
-  z-index: 50;
+  // top:-$scale*2.35;
+  z-index: 1;
   @media(max-width: 565px){
     top:-$scale*5;
     margin-top:-450px !important;
@@ -120,6 +125,7 @@ $expand_speed:1.25s;
   -webkit-transition: -webkit-transform $expand_speed;
   transition: transform $expand_speed;
   color:transparent;
+  padding-bottom:$scale/2;
   -moz-transition-property:color;
   -webkit-transition-property:color;
   transition-property:color;

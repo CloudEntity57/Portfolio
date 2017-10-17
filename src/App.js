@@ -19,31 +19,43 @@ class App extends Component {
       css3:false,
       mongodb:false,
       nodejs:false,
-      lens:true
+      lens:true,
+      subtitle:'|',
+      top_form:false,
+      contact_btn_text:true
     }
   }
   componentDidMount(){
-    this.startScroll(250);
-//     jquery.fn.followTo = function (pos) {
-//     var $this = this,
-//         $window = jquery(window);
-//
-//     $window.scroll(function (e) {
-//         if ($window.scrollTop() > pos) {
-//             $this.css({
-//                 position: 'absolute',
-//                 top: pos*2
-//             });
-//         } else {
-//             $this.css({
-//                 position: 'fixed',
-//                 top: $window.scrollTop()
-//             });
-//         }
-//     });
-// };
-//
-// jquery('#intro_bar').followTo(354);
+
+  let subtitle = this.state.subtitle;
+  setTimeout(()=>{
+    this.addLetter(0);
+  },750);
+
+  }
+  addLetter(index,subtitle){
+    let full = 'Web Developer | Designer ';
+    full = full.split('');
+    if(index == full.length-1) return (()=>{
+      this.setState({
+        react:true,
+        redux:true,
+        javascript:true,
+        html5:true,
+        css3:true,
+        mongodb:true,
+        nodejs:true
+      })
+    })();
+    let current = (subtitle) ? subtitle.split('') : [];
+    current = current.concat(full[index]).join('');
+    this.setState({
+      subtitle:current
+    });
+    index++;
+    setTimeout(()=>{
+      this.addLetter(index,current);
+    },75)
   }
   startScroll(time){
     let skills = [
@@ -57,7 +69,7 @@ class App extends Component {
         if(count>skills.length-1){
           count=0;
         }
-      },1700);
+      },1000);
     });
   }
   timeout(time){
@@ -80,26 +92,7 @@ class App extends Component {
       [skill]:true
     });
   }
-//   showSkills(){
-//     jquery('.skills').css('width','100%');
-//     let skills = [
-//       'react','redux','javascript','html5','css3','mongodb','nodejs'
-//     ];
-//     let count = 0;
-//     setInterval(()=>{
-//     const skill = skills[count];
-//     const old = skills[count-1] || skills[skills.length-1];
-//     this.setState({
-//       [old]:false,
-//       [skill]:true
-//     });
-//     count++;
-//     if(count>skills.length-1){
-//       count=0;
-//     }
-//   },2000
-//   );
-// }
+
   clearInterval(){
     clearInterval(showSkills);
     for(let val in this.state){
@@ -109,17 +102,40 @@ class App extends Component {
         });
       }
     };
-    // if(this.state.lens==false){
-    //   this.startScroll(2000);
-    // }
-    // this.timeout(5000).then(
-    // );
+
   }
   clearColors(){
     console.log('clearing colors');
     this.setState({
       lens:false
     });
+  }
+  letsWorkTogether(e){
+    e.preventDefault();
+    jquery(e.target).addClass('work_clicked');
+    this.setState({
+      contact_btn_text:false
+    })
+    setTimeout(()=>{
+      jquery('.work_clicked').addClass('work_expand');
+      setTimeout(()=>{
+        // jquery('.work_clicked').remove();
+        this.setState({
+          top_form:true
+        });
+      },1000);
+    },750)
+  }
+  topFormClose(e){
+    this.setState({
+      top_form:false
+    });
+    jquery('.work_with').removeClass('work_expand').removeClass('work_clicked');
+    setTimeout(()=>{
+        this.setState({
+          contact_btn_text:true
+        })
+    },550);
   }
   render() {
     let props = {
@@ -143,10 +159,42 @@ class App extends Component {
         </div>
       );
     });
+    const subtitle = this.state.subtitle;
+    const contact_btn_text = (this.state.contact_btn_text) ? "Let's work together" : "";
+    const form = ( this.state.top_form )?(
+      <div className="top_form">
+        <div className="top_form_close" onClick={this.topFormClose.bind(this)}>x</div>
+        <form className = "form" id = "contact-form" method = "POST" action="https://formspree.io/josh@allenb.com">
+        <h1>Let's get started.</h1>
+        <h4>After introducing yourself and describing your project, I'll get in touch and schedule a time for us to talk in more detail. Or, contact me directly at <a href="mailto:joshfost@gmail.com">joshfost@gmail.com.</a></h4>
+          <div className = "form-group">
+            <input placeholder="Name*" className="form-control" type = "text" name = "name" id = "name"/>
+          </div>
+          <div className = "form-group">
+            <input placeholder="email*" className="form-control" type = "text" name = "email" id = "email"/>
+          </div>
+          <div className = "form-group">
+            <input placeholder="phone" className="form-control" type = "text" name = "phone" id = "phone"/>
+          </div>
+          <div className = "form-group">
+            <textarea placeholder="Describe your project. What do you want to create, and why? How can I be of assistance in making it happen?" className="form-control" name = "message" id = "details"></textarea>
+          </div>
+          <div className="hidden">
+            <label htmlFor = "address">Address </label>
+            <input name = "address" id = "address"/>
+          </div>
+          <div className = "form-group">
+            <button className="form-control btn btn-primary" type="submit" >Send</button>
+          </div>
+          <p>&#42;&nbsp;required fields</p>
+        </form>
+      </div>
+    ) : '';
     // projects.splice(2,0,divider);
     return (
       <div id="top" >
-        <nav className="navbar navbar-fixed-top navbar-inverse">
+      { form }
+        {/* <nav className="navbar navbar-fixed-top navbar-inverse">
         <div className="container">
           <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span className="icon-bar"></span>
@@ -167,9 +215,13 @@ class App extends Component {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
       <header>
         <div className="title-bkg">
+        <div className="learn_more">
+          <a href='#portfolio'>Learn more about what I do<br/>
+          <div className="fa fa-chevron-down"></div></a>
+        </div>
           <div className="title-bar">
           </div>
           <div className="title-opacity">
@@ -178,7 +230,8 @@ class App extends Component {
             <div className="row">
               <div className="lead col-sm-12">
                 <div className="main_name">Josh Foster</div>
-                <div className="main_name_subtitle"><a href="#portfolio">Web Developer </a><span>|</span> Designer </div>
+                <div className="main_name_subtitle">{ subtitle }</div>
+                <div ref='work_with' onClick={this.letsWorkTogether.bind(this)} className="work_with">{contact_btn_text}</div>
               </div>
             </div>
           </div>
@@ -186,6 +239,9 @@ class App extends Component {
       </header>
       <div className="portfolio container lead" id="portfolio">
           <div className="row circle_row">
+            <div className="center">
+              <h1>Skills</h1>
+            </div>
             <div className="circle_float portfolio_name col-xs-12">
               <div className="skills">
                   <Circle {...props} expanding={this.state.react} id="react" brand="React" url="../photos/react-logo-1000-transparent.png"/>
@@ -216,6 +272,9 @@ class App extends Component {
               </div>
               {/* <div className="insert row">
               </div> */}
+              <div className="center">
+                  <h1>Projects</h1>
+              </div>
               <div className="portfolio_name col-xs-12">
               </div>
               {/* links here */}
@@ -227,8 +286,9 @@ class App extends Component {
             <div className="portfolio_name col-xs-12" >
                 Contact Me
             </div>
-            <div className="contact col-xs-12">
-              <div className="row">
+            <div className="contact_bottom col-xs-12">
+              <div ref='work_with' onClick={this.letsWorkTogether.bind(this)} className="work_with">{contact_btn_text}</div>
+              {/* <div className="row">
                 <div className="lead col-sm-6">
                   <form className = "form" id = "contact-form" method = "POST" action="https://formspree.io/josh@allenb.com">
                     <div className = "form-group">
@@ -265,15 +325,17 @@ class App extends Component {
                   </p>
                     <Fibonacci size={25} unit='em' iteration={0} spins={10}/>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           </div>
         <footer className="nav-footer lead">
           <ul>
-            <li className="hidden-sm hidden-xs">My Social Media Links:</li>
             <a href="https://www.linkedin.com/in/joshfoster-dev" alt="Josh Foster LinkedIn">
               <li>LinkedIn&nbsp;<i className = "fa fa-linkedin-square"></i></li>
+            </a>
+            <a href="https://github.com/CloudEntity57?tab=repositories" alt="Josh Foster LinkedIn">
+              <li>GitHub&nbsp;<i className = "fa fa-github"></i></li>
             </a>
           </ul>
         </footer>

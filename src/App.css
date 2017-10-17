@@ -145,6 +145,7 @@
   position: relative;
   width: 2em;
   height: 2em;
+  display: none;
   background-position: center;
   background-size: cover;
   background-color: #fff;
@@ -154,8 +155,13 @@
   box-sizing: content-box !important;
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
-  -webkit-transition: -webkit-transform 1.25s;
-  transition: transform 1.25s;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: all 0.25s;
+}
+
+.showing {
+  display: block;
+  transition: all 0.25s;
 }
 
 .photo_inner {
@@ -167,9 +173,9 @@
   position: absolute;
   width: 0px !important;
   height: 0px !important;
-  -moz-transition: -moz-transform 1.25s;
-  -webkit-transition: -webkit-transform 1.25s;
-  transition: transform 1.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
   opacity: .5;
   clip-path: circle(2em at 1em 1em);
 }
@@ -215,9 +221,6 @@
 }
 
 .raised {
-  -webkit-transform: translateY(-1em);
-  -moz-transform: translateY(-1em);
-  transform: translateY(-1em);
   color: #fff !important;
 }
 
@@ -235,8 +238,7 @@
 
 .circle_float {
   position: absolute;
-  top: -4.7em;
-  z-index: 50;
+  z-index: 1;
 }
 
 @media (max-width: 565px) {
@@ -268,10 +270,11 @@
 }
 
 .brand_title {
-  -moz-transition: -moz-transform 1.25s;
-  -webkit-transition: -webkit-transform 1.25s;
-  transition: transform 1.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
   color: transparent;
+  padding-bottom: 1em;
   -moz-transition-property: color;
   -webkit-transition-property: color;
   transition-property: color;
@@ -311,8 +314,12 @@
   left: 0px;
 }
 
+html, body {
+  font-family: 'Montserrat',sans-serif;
+}
+
 #portfolio {
-  padding-top: 35px;
+  padding-bottom: 15vh;
 }
 
 .clearfix:after {
@@ -402,7 +409,7 @@
   margin: auto;
   position: absolute;
   bottom: 45%;
-  left: 35%;
+  left: 43%;
   z-index: 500000;
   transition-property: opacity;
   -webkit-transition-property: opacity;
@@ -421,7 +428,11 @@
 }
 
 body {
-  background-color: #9695a2;
+  background-color: lightgrey;
+}
+
+.center {
+  text-align: center;
 }
 
 .main_name {
@@ -482,10 +493,13 @@ body {
 }
 
 .title-text {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bold !important;
+  text-transform: uppercase;
   padding: 30px;
   position: absolute;
   width: 100%;
-  top: 110px;
+  top: 0px;
   z-index: 2;
 }
 
@@ -497,7 +511,7 @@ body {
 }
 
 .title-text .col-sm-12 {
-  text-align: right;
+  text-align: center;
   color: white;
 }
 
@@ -569,6 +583,12 @@ body {
 
 .links, .contact {
   margin-bottom: 15px;
+}
+
+.contact_bottom {
+  text-align: center;
+  background-color: #222222;
+  padding: 5em 0em;
 }
 
 .link {
@@ -691,6 +711,116 @@ body {
 
 .square-wrapper {
   position: relative;
+}
+
+.work_with {
+  color: #fff;
+  border: 1px solid tomato;
+  padding: 1.5em;
+  border-radius: 90px;
+  width: 250px;
+  display: inline-block;
+  font-size: .75em;
+  cursor: pointer;
+  margin-top: 1.5em;
+  z-index: 60 !important;
+  transition: width .5s ease-out, color .5s ease-out, background-color .5s ease-out;
+  transition-property: color,width,background-color;
+}
+
+.work_with:hover {
+  color: #000;
+  background-color: tomato;
+  width: 285px;
+}
+
+.work_clicked {
+  background-color: #000;
+  width: 45px;
+  border: 1px solid #fff;
+  padding: 2.5em;
+}
+
+.work_clicked:hover {
+  background-color: #000;
+  width: 45px;
+  border: 1px solid #fff;
+  transition: width 750ms ease-out, transform 3s ease-out;
+}
+
+.work_expand {
+  transform: scale(100);
+}
+
+.top_form {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  z-index: 5;
+  background-color: black;
+}
+
+.top_form .form {
+  margin-top: 15vh;
+  width: 60vw;
+  display: inline-block;
+}
+
+.top_form .form textarea {
+  height: 25vh;
+}
+
+.top_form .form input, .top_form .form textarea {
+  background-color: #6f5b5b;
+  color: black;
+}
+
+.top_form .form h1 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+.top_form .form h4 {
+  color: lightgrey;
+  margin-bottom: 1.5em;
+}
+
+.top_form .top_form_close {
+  font-family: 'Helvetica',sans-serif;
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  cursor: pointer;
+  font-size: 3.5em;
+  color: gray;
+  transition: color .35s ease-in;
+}
+
+.top_form .top_form_close:hover {
+  color: #fff;
+}
+
+.learn_more {
+  font-family: 'Helvetica',sans-serif;
+  font-size: 1.25em;
+  text-transform: none;
+  position: absolute;
+  bottom: 55px;
+  width: 100vw;
+  text-align: center;
+  z-index: 2;
+}
+
+.learn_more a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.learn_more a:hover {
+  color: white;
+  transition: .35s ease-in;
 }
 
 .divider1_wrapper {

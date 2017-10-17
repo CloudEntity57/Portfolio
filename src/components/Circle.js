@@ -9,12 +9,21 @@ class Circle extends Component{
     //   this.openLens();
     // }else{
     //   this.closeLens();
-    // }
+    // // }
+    // const id = '#'+this.props.brand+'1';
+    // const $photo = jquery(id);
+    // setTimeout(()=>{
+    //   $photo.addClass('showing');
+    //   setTimeout(()=>{
+    //     this.openLens();
+    //   },750)
+    // },750);
   }
   componentWillReceiveProps(nextProps){
     const expanding = nextProps.expanding;
     // console.log('expanding ',this.props.brand,': ',expanding);
     if(expanding==true){
+      this.show();
       this.openLens();
     }else{
       this.closeLens();
@@ -34,38 +43,49 @@ class Circle extends Component{
       $lens3.addClass('right');
     }
   }
+  show(){
+    const id = '#'+this.props.brand+'1';
+    const $photo = jquery(id);
+    $photo.addClass('showing');
+    setTimeout(()=>{
+      this.closeLens();
+      const brand_class = '.'+this.props.brand;
+      jquery(brand_class).addClass('raised');
+    },600);
+  }
   openLens(e){
     const id = '#'+this.props.brand+'1';
     const $photo = jquery(id);
-    const $lens1 = $photo.children('.lens1');
-    const $lens2 = $photo.children('.lens2');
-    const $lens3 = $photo.children('.lens3');
-    const $lens4 = $photo.children('.lens4');
+    // const $lens1 = $photo.children('.lens1');
+    // const $lens2 = $photo.children('.lens2');
+    // const $lens3 = $photo.children('.lens3');
+    // const $lens4 = $photo.children('.lens4');
     const brand_class = '.'+this.props.brand;
-    jquery(brand_class).addClass('raised');
     $photo.addClass('bigger');
-    $lens1.addClass('left');
-    $lens4.addClass('left');
-    $lens2.addClass('right');
-    $lens3.addClass('right');
+    // $lens1.addClass('left');
+    // $lens4.addClass('left');
+    // $lens2.addClass('right');
+    // $lens3.addClass('right');
+    jquery(brand_class).addClass('raised');
+
   }
   closeLens(e){
     const id = '#'+this.props.brand+'1';
     const $photo = jquery(id);
-    const $lens1 = $photo.children('.lens1');
-    const $lens2 = $photo.children('.lens2');
-    const $lens3 = $photo.children('.lens3');
-    const $lens4 = $photo.children('.lens4');
+    // const $lens1 = $photo.children('.lens1');
+    // const $lens2 = $photo.children('.lens2');
+    // const $lens3 = $photo.children('.lens3');
+    // const $lens4 = $photo.children('.lens4');
     const brand_class = '.'+this.props.brand;
-    setTimeout(()=>{
-      jquery(brand_class).removeClass('raised');
-    },425)
+    // setTimeout(()=>{
+    //   jquery(brand_class).removeClass('raised');
+    // },425)
     $photo.removeClass('bigger');
     if(this.props.lens==true){
-      $lens1.removeClass('left');
-      $lens4.removeClass('left');
-      $lens2.removeClass('right');
-      $lens3.removeClass('right');
+      // $lens1.removeClass('left');
+      // $lens4.removeClass('left');
+      // $lens2.removeClass('right');
+      // $lens3.removeClass('right');
     }
   }
   clearPromise(e){
@@ -75,10 +95,11 @@ class Circle extends Component{
     })
   }
   openLensTrigger(e){
-    this.clearPromise().then((result)=>{;
-      this.openLens(e);
-      // this.props.clearColors();
-    });
+    this.openLens(e);
+    // this.clearPromise().then((result)=>{;
+    //   this.openLens(e);
+    //   // this.props.clearColors();
+    // });
   }
 
   render(){
@@ -91,10 +112,10 @@ class Circle extends Component{
         <div className="circle_holder clearfix">
           <div onMouseEnter={this.openLensTrigger.bind(this)} onMouseLeave={this.closeLens.bind(this)} id={brand_id} className="photo photo_inner">
             <img src={url} alt="brand_logo" className="brand_logo img-responsive" />
-            <div className="lens1"></div>
+            {/* <div className="lens1"></div>
             <div className="lens2"></div>
             <div className="lens3"></div>
-            <div className="lens4"></div>
+            <div className="lens4"></div> */}
           </div>
         </div>
       </div>

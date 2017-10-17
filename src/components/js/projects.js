@@ -17,7 +17,7 @@ export const links = [
         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_550/v1507433252/DC_9_pxdm4t.png"
       ],
       text:[
-        "Full stack real estate search app - uses React/Express stack.",
+        "Real estate search app built on React/Express.",
         "Searches Washington DC area for open houses and maps them. Integrates API data from the Washington DC MLS feed.",
         "Maps by day, sorts by price, time, days on market.",
         "Features photo carousel, contact form, custom CSS animated buttons."
@@ -47,7 +47,7 @@ export const links = [
    {
        photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_564/v1489470677/Untitled_picture_c8abxv.jpg",
        url:"https://smartset-7a283.firebaseapp.com/",
-       title: "SmartSet Musician Gig Generator",
+       title: "SmartSet",
        images:[
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507569883/SmartSet0_aqegmh.png",
          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1507576994/SmartSet6_tqmcic.png",
