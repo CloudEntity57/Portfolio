@@ -105,10 +105,14 @@ $expand_speed:.25s;
 
   @media(max-width: 565px){
     width:25%;
+    display: none;
   }
 }
 .circle_row{
   position:relative;
+  @media(max-width: 565px){
+    // display:none;
+  }
 }
 .covered{
   font-size:.5em;
@@ -138,7 +142,8 @@ $expand_speed:.25s;
   justify-content: space-between;
   flex-wrap:nowrap;
   @media(max-width: 565px){
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 .skills_title{

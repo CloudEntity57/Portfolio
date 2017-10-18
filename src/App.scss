@@ -8,6 +8,14 @@ html,body{
 }
 #portfolio{
   padding-bottom:15vh;
+  @media(max-width: 565px){
+    padding-bottom:0px;
+  }
+}
+.skill_title{
+  @media(max-width: 565px){
+    display: none;
+  }
 }
 .clearfix:after{
   content: "";
@@ -16,24 +24,24 @@ html,body{
 }
 .title-bar{
   height: 100vh;
-  // @media(max-width:668px){
-  //   display:none;
-  // }
+  @media(max-width:668px){
+    opacity:0;
+  }
 }
 .lead.col-sm-12{
   margin-top:35vh;
   @media(max-width:565px){
-    margin-top:55vh;
+    margin-top:15vh;
   }
 }
 .title-bkg{
-  // @media(max-width: 668px){
-    // background-image:url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_800/v1507588997/Josh_eclipse_olovsk.jpg");
-  //   // background-attachment: fixed;
-    // background-size:cover;
-    // background-position: -75vw 9vh;
-  //   background-repeat: no-repeat;
-  // }
+  @media(max-width: 668px){
+    background-image:url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_600/v1508174464/IMG_8200_pcg9nh.jpg");
+    // background-attachment: fixed;
+    background-size:cover;
+    background-position: -55vw 0vh;
+    background-repeat: no-repeat;
+  }
 }
 .title-bar2{
   height:100vh;

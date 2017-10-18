@@ -251,6 +251,7 @@
 @media (max-width: 565px) {
   .circle {
     width: 25%;
+    display: none;
   }
 }
 
@@ -292,7 +293,7 @@
 
 @media (max-width: 565px) {
   .skills {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -322,6 +323,18 @@ html, body {
   padding-bottom: 15vh;
 }
 
+@media (max-width: 565px) {
+  #portfolio {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 565px) {
+  .skill_title {
+    display: none;
+  }
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -332,13 +345,28 @@ html, body {
   height: 100vh;
 }
 
+@media (max-width: 668px) {
+  .title-bar {
+    opacity: 0;
+  }
+}
+
 .lead.col-sm-12 {
   margin-top: 35vh;
 }
 
 @media (max-width: 565px) {
   .lead.col-sm-12 {
-    margin-top: 55vh;
+    margin-top: 15vh;
+  }
+}
+
+@media (max-width: 668px) {
+  .title-bkg {
+    background-image: url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_600/v1508174464/IMG_8200_pcg9nh.jpg");
+    background-size: cover;
+    background-position: -55vw 0vh;
+    background-repeat: no-repeat;
   }
 }
 

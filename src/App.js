@@ -239,7 +239,7 @@ class App extends Component {
       </header>
       <div className="portfolio container lead" id="portfolio">
           <div className="row circle_row">
-            <div className="center">
+            <div className="skill_title center">
               <h1>Skills</h1>
             </div>
             <div className="circle_float portfolio_name col-xs-12">

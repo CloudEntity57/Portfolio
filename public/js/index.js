@@ -44,15 +44,15 @@ $('a').on('click',function(e){
 
 (()=>{
   window.addEventListener('resize',()=>{
-    // console.log('width: ',window.innerWidth);
-    // console.log('height: ',window.innerHeight);
-    // let width=window.innerWidth;
-    // let height=window.innerHeight;
-    // if(width/height>1.618 && width/height<1.619){
-    //   console.log("It's the Golden Ratio!!");
-    // }else{
-    //   console.log(width/height);
-    // }
+    console.log('width: ',window.innerWidth);
+    console.log('height: ',window.innerHeight);
+    let width=window.innerWidth;
+    let height=window.innerHeight;
+    if(width/height>1.615 && width/height<1.621){
+      console.log("It's the Golden Ratio!!");
+    }else{
+      console.log(width/height);
+    }
     // let bodyHTML = document.body.innerHTML;
     // bodyHTML.innerHTML+=('<div>'+window.innerWidth+'</div>');
   });
