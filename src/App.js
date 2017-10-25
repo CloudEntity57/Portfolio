@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Circle from './components/Circle';
+// import Circle from './components/Circle';
 import Project from './components/Project';
 import { links } from './components/js/projects.js';
 import Fibonacci from './components/Fibonacci';

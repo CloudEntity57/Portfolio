@@ -169,13 +169,13 @@
   box-sizing: content-box !important;
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
-  -webkit-transition: -webkit-transform 0.25s;
-  transition: all 0.25s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: all 1s;
 }
 
 .showing {
   display: block;
-  transition: all 0.25s;
+  transition: all 1s;
 }
 
 .photo_inner {
@@ -187,9 +187,9 @@
   position: absolute;
   width: 0px !important;
   height: 0px !important;
-  -moz-transition: -moz-transform 0.25s;
-  -webkit-transition: -webkit-transform 0.25s;
-  transition: transform 0.25s;
+  -moz-transition: -moz-transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
   opacity: .5;
   clip-path: circle(2em at 1em 1em);
 }
@@ -285,9 +285,9 @@
 }
 
 .brand_title {
-  -moz-transition: -moz-transform 0.25s;
-  -webkit-transition: -webkit-transform 0.25s;
-  transition: transform 0.25s;
+  -moz-transition: -moz-transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
   color: transparent;
   padding-bottom: 1em;
   -moz-transition-property: color;
