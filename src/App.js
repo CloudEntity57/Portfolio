@@ -154,8 +154,7 @@ class App extends Component {
       num++;
       return (
         <div>
-      <Project key={key} number={num} project={proj} />
-
+          <Project key={key} number={num} project={proj} />
         </div>
       );
     });
@@ -229,6 +228,7 @@ class App extends Component {
           <div className="title-text container-fluid">
             <div className="row">
               <div className="lead col-sm-12">
+                <img width="75px" src='./photos/Josh_logo.png' />
                 <div className="main_name">Josh Foster</div>
                 <div className="main_name_subtitle">{ subtitle }</div>
                 <div ref='work_with' onClick={this.letsWorkTogether.bind(this)} className="work_with">{contact_btn_text}</div>

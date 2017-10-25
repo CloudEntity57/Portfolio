@@ -136,4 +136,12 @@ $expand_speed:.35s;
   justify-content: space-around;
   width:25vw;
   margin:auto;
+  @media(max-width:765px){
+    justify-content: space-around;
+    width:35vw;
+  }
+  @media(max-width:565px){
+    justify-content: space-around;
+    width:75vw;
+  }
 }

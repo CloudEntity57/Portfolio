@@ -25,7 +25,10 @@ export default class Portal extends Component{
     const id = '#'+this.props.brand;
     const $port_photo = jquery(id);
     const brand_class = '.'+this.props.brand;
+    jquery('.port_opened').removeClass('port_bigger');
+    jquery('.port_photo').removeClass('port_opened');
     $port_photo.addClass('port_bigger');
+    $port_photo.addClass('port_opened');
     this.props.changeView(this.props.count);
   }
   closeLens(){

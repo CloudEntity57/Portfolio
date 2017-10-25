@@ -140,6 +140,20 @@
   margin: auto;
 }
 
+@media (max-width: 765px) {
+  .portals {
+    justify-content: space-around;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 565px) {
+  .portals {
+    justify-content: space-around;
+    width: 75vw;
+  }
+}
+
 .photo, .photo2 {
   border-radius: 100%;
   position: relative;
@@ -345,27 +359,27 @@ html, body {
   height: 100vh;
 }
 
-@media (max-width: 668px) {
+@media (max-width: 768px) {
   .title-bar {
     opacity: 0;
   }
 }
 
 .lead.col-sm-12 {
-  margin-top: 35vh;
+  margin-top: 18vh;
 }
 
 @media (max-width: 565px) {
   .lead.col-sm-12 {
-    margin-top: 15vh;
+    margin-top: 5vh;
   }
 }
 
-@media (max-width: 668px) {
+@media (max-width: 768px) {
   .title-bkg {
     background-image: url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_600/v1508174464/IMG_8200_pcg9nh.jpg");
     background-size: cover;
-    background-position: -55vw 0vh;
+    background-position: -15vw 0vh;
     background-repeat: no-repeat;
   }
 }
@@ -548,7 +562,7 @@ body {
 }
 
 .title-text img {
-  transform: rotate(180deg);
+  width: 12vw;
 }
 
 .portfolio {
@@ -815,6 +829,13 @@ body {
   margin-bottom: 1.5em;
 }
 
+@media (max-width: 565px) {
+  .top_form .form {
+    width: 90vw;
+    margin-top: 5vh;
+  }
+}
+
 .top_form .top_form_close {
   font-family: 'Helvetica',sans-serif;
   position: absolute;
@@ -828,6 +849,13 @@ body {
 
 .top_form .top_form_close:hover {
   color: #fff;
+}
+
+@media (max-width: 565px) {
+  .top_form .top_form_close {
+    top: 0em;
+    right: .25em;
+  }
 }
 
 .learn_more {
