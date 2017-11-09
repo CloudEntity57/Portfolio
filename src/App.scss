@@ -7,6 +7,11 @@
 html,body{
   font-family: 'Montserrat',sans-serif;
 }
+main{
+  background:-webkit-linear-gradient(top, #494b73 0%, #f1bd5e 100%);
+  background:-moz-linear-gradient(top, #494b73 0%, #f1bd5e 100%);
+  background:-linear-gradient(top, #494b73 0%, #f1bd5e 100%);
+}
 #portfolio{
   padding-bottom:15vh;
   @media(max-width: 565px){
@@ -477,7 +482,7 @@ $square_size:250px;
       height:25vh;
     }
     input,textarea{
-      background-color: #6f5b5b;
+      background-color: #dad9dc;
       color:black;
     }
     h1{

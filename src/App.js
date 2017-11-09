@@ -229,7 +229,7 @@ class App extends Component {
           <div className="title-text container-fluid">
             <div className="row">
               <div className="lead col-sm-12">
-                <img width="75px" src='./photos/Josh_logo.png' />
+                <img width="75px" src='./photos/Josh_logo_red.png' />
                 <div className="main_name">Josh Foster</div>
                 <div className="main_name_subtitle">{ subtitle }</div>
                 <div ref='work_with' onClick={this.letsWorkTogether.bind(this)} className="work_with">{contact_btn_text}</div>
@@ -238,10 +238,11 @@ class App extends Component {
           </div>
         </div>
       </header>
+      <main class="clearfix">
       <div className="portfolio container lead" id="portfolio">
           <div className="row circle_row">
             <div className="skill_title center">
-              <h1>Skills</h1>
+              {/* <h1>Skills</h1> */}
             </div>
             <div className="circle_float portfolio_name col-xs-12">
               <div className="skills">
@@ -274,7 +275,7 @@ class App extends Component {
               {/* <div className="insert row">
               </div> */}
               <div className="center">
-                  <h1>Projects</h1>
+                  {/* <h1>Projects</h1> */}
               </div>
               <div className="portfolio_name col-xs-12">
               </div>
@@ -330,6 +331,7 @@ class App extends Component {
             </div>
           </div>
           </div>
+        </main>
         <footer className="nav-footer lead">
           <ul>
             <a href="https://www.linkedin.com/in/joshfoster-dev" alt="Josh Foster LinkedIn">
