@@ -2,7 +2,7 @@ export const links = [
   {
       photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1501533478/DC_6_irbfjo.png",
       // photo: "../images/DCOpenHouse.gif",
-      url:"https://dcopenhouselist.com/#/search/sunday/FullDCArea",
+      url:"http://dcopenhouselist.com/#/search/sunday/FullDCArea",
       title: "DC's Open House List",
       images:[
         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1501533478/DC_6_irbfjo.png",
