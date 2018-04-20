@@ -2,7 +2,7 @@ export const links = [
   {
       photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1501533478/DC_6_irbfjo.png",
       // photo: "../images/DCOpenHouse.gif",
-      url:"http://dcopenhouselist.com/#/search/sunday/FullDCArea",
+      url:"http://dcopenhouselist.com",
       title: "DC's Open House List",
       images:[
         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1501533478/DC_6_irbfjo.png",
@@ -17,11 +17,12 @@ export const links = [
         "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_550/v1507433252/DC_9_pxdm4t.png"
       ],
       text:[
-        "Real estate search app built on React/Express.",
+        "Fully IDX integrated real estate searching/mapping app built on React/Express.",
         "Searches Washington DC area for open houses and maps them. Integrates API data from the Washington DC MLS feed.",
         "Maps by day, sorts by price, time, days on market.",
         "Features photo carousel, contact form, custom CSS animated buttons."
-      ]
+      ],
+      github:'https://github.com/CloudEntity57/DC-Open-House_List'
   },
     {
         photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1501533478/DC_6_irbfjo.png",
@@ -42,7 +43,27 @@ export const links = [
           "Front end build for Italian restaurant. Uses CSS3 transitions. Frameworks: React, SASS, jQuery.",
           "Page detects scrolling events, triggering CSS3 screen animations and fade-ins for an eye-catching user experience.",
           "One of my favorite aspects of web development is continually pushing the limits of front end tools."
-        ]
+        ],
+        github:'https://github.com/CloudEntity57/Trieggos-Italian'
+    },
+    {
+        photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_750/v1522875689/MovieTron_n3kqwx.png",
+        // photo: "../images/DCOpenHouse.gif",
+        url:"https://evening-crag-68808.herokuapp.com",
+        title: "MovieTron - a Clone of Netflix UI",
+        images:[
+          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1522875689/MovieTron_n3kqwx.png",
+          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_140/v1522876230/MovieTron2_fjgqas.png"
+        ],
+        big_images:[
+          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_950/v1522875689/MovieTron_n3kqwx.png",
+          "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_950/v1522876230/MovieTron2_fjgqas.png"
+        ],
+        text:[
+          "Front end recreation of the Netflix UI environment; most notably the sliding video boxes. Frameworks: React, SASS, jQuery.",
+          "Created as an experiment to recreate a popular site by eye alone, without referring to the site's source code."
+        ],
+        github:'https://github.com/CloudEntity57/Netflix-Clone'
     },
    {
        photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_564/v1489470677/Untitled_picture_c8abxv.jpg",
@@ -71,7 +92,8 @@ export const links = [
          "Lyrics and guitar chords are displayed, and anything can be edited at any time, all modular and fast-loading with React.",
          "Built in JavaScript algorithms allow a user to automatically compile a long show with blues songs, or a short show with upbeat songs.",
          "When it's time to perform, gigs are viewed on a customizable dashboard that scrolls the songs in order."
-       ]
+       ],
+       github:'https://github.com/CloudEntity57/SmartSet'
    },
   //  {
   //      photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_563/v1497474684/CouchPolitics_rt2ufw.png",
@@ -102,8 +124,9 @@ export const links = [
          images:[],
          big_images:["http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1475689200/Allen_Brothers_cl4nrz.jpg"],
          text:[
-           "PHP driven responsive site for real estate brokerage. Includes a form that emails submissions to owner while protecting against cross-site scripting attacks."
-         ]
+           "Custom PHP Wordpress template for real estate brokerage"
+         ],
+         github:'https://github.com/CloudEntity57/Allen_Brothers_WP_Theme/tree/master'
      },
     // {
     //     photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_544/v1491262402/SpotifyBrowser_f8qpax.png",
@@ -123,7 +146,8 @@ export const links = [
         big_images:["http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,h_327/v1495221822/Redux_Leaflet_gj7xpa.png"],
         text:[
           "React/Redux single page app that connects to the Leaflet Maps API using React-Leaflet.js and components from the Material-UI library."
-        ]
+        ],
+        github:'https://github.com/CloudEntity57/My_Redux_Leaflet_App'
     },
     // {
     //     photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1487626184/GistAlt_cbtify.png",
@@ -153,7 +177,8 @@ export const links = [
         title: "Collatz Conjecture",
         images:[],
         big_images:["http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1487829847/clouds_lvmllc.png"],
-        text:["Simple single page application allowing users to plot the iterations of a particular mathematical function. JavaScript, jQuery & Bootstrap."]
+        text:["Simple single page application allowing users to plot the iterations of a particular mathematical function. JavaScript, jQuery & Bootstrap."],
+        github:''
     },
     // {
     //     photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1484190674/Web_shot_bz0men.png",
@@ -167,7 +192,8 @@ export const links = [
         title: "Allen Brothers Residential Site",
         images:[],
         big_images:["http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1475689267/Houston_TX_empn2d.jpg"],
-        text:["Existing CMS website cleaned up and made professional with jQuery and JavaScript DOM manipulation on the front end. Full mobile responsivity added with Bootstrap and raw CSS; previously unusable."]
+        text:["Existing CMS website cleaned up and made professional with jQuery and JavaScript DOM manipulation on the front end. Full mobile responsivity added with Bootstrap and raw CSS; previously unusable."],
+        github:''
     }
     // {
     //     photo: "http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/v1476122562/IMG_5141-compressed_eorbdj.jpg",

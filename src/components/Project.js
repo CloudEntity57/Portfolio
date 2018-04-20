@@ -10,18 +10,32 @@ export default class Project extends Component{
       lens:true,
       expanding:false,
       text:0,
-      opacity:false
+      opacity:false,
+      list:[]
     }
   }
-  clearColors(){
-  }
-  clearInterval(){
-  }
+  //preload all images for faster loading
+  // componentWillMount(){
+  //   let title = this.props.project.title;
+  //   const list = [];
+  //   if(this.props.project.images.length>0){
+  //     function preloadImages(array) {
+  //       console.log('preload ',array);
+  //       for (var i = 0; i < array.length; i++) {
+  //         var img = new Image();
+  //         img.src = array[i];
+  //         console.log('preloading image ',i,' - ',img);
+  //         list.push(img);
+  //       }
+  //     }
+  //     preloadImages(this.props.project.images);
+  //     this.setState({
+  //       list
+  //     })
+  //   }
+  // }
   changeView(view){
     console.log('changing view');
-    const images = this.props.project.big_images || [];
-    const image = 'url('+images[view]+')';
-    jquery(this.refs.image).css('background-image',image);
     this.setState({
       text:view
     })
@@ -46,12 +60,38 @@ export default class Project extends Component{
   render(){
     const images = this.props.project.images || [];
     const big_images = this.props.project.big_images || [];
-      const main_image={
-        'backgroundImage':'url('+big_images[this.state.text]+')'
+    let title = this.props.project.title.split('').filter((val)=>{
+      return val !==' ' && val !=="'";
+    }).join('')
+    const loaded_images = big_images.map((img)=>{
+      const loaded_style = {
+        backgroundImage:'url('+img+')'
       }
+      return (
+        // <div>
+        //   <img className='img-responsive' src={img} />
+        // </div>
+        <div>
+          <div ref="image" className = 'portfolio-image' style ={loaded_style} alt={this.props.project.title}></div>
+        </div>
+      )
+    });
+    // console.log('currently stored: ',loaded_images)
+    const default_img = (this.props.project.big_images) ? big_images[0] : '';
+    const main_image={
+        backgroundImage:'url('+big_images[this.state.text]+')'
+      }
+
+    const main_photo=loaded_images[this.state.text];
+
     let count = -1;
     let project_id='project'+this.props.number;
     let portal_id='portal'+this.props.number;
+    const github = (this.props.project.github !=='') ? (
+      <div className='github-url'>
+        <i className = "fa fa-github"></i><a href={this.props.project.github} alt='GitHub.com'> View GitHub Repo </a>
+      </div>
+    ): '';
     const portals = images.map((image)=>{
       const url=image;
       const key = 'portal'+count;
@@ -70,7 +110,8 @@ export default class Project extends Component{
               <a ref='image_link' target='blank' onMouseEnter={this.showOpacity.bind(this)} onMouseLeave={this.showOpacity.bind(this)} href = {this.props.project.url} title = {this.props.project.title}>
                 <div ref="opacity" className="portfolio-image-opacity"></div>
                 <div className="visit_site" ref="visit_site">VISIT</div>
-                <div ref="image" className = 'portfolio-image' style ={main_image} alt={this.props.project.title}></div>
+                {/* <div ref="image" className = 'portfolio-image' style ={main_image} alt={this.props.project.title}></div> */}
+                { main_photo }
               </a>
             </div>
           </div>
@@ -78,6 +119,7 @@ export default class Project extends Component{
             {portals}
           </div>
           <div className='portfolio-title'>{this.props.project.title}</div>
+          { github }
           <div className='portfolio-text'>{text}</div>
         {/* <i className='fa fa-cogs' aria-hidden='true'>
         </i> */}

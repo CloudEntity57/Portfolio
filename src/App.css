@@ -176,6 +176,7 @@
 
 .showing {
   display: block;
+  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
@@ -591,8 +592,13 @@ body {
 }
 
 .portfolio-title {
-  margin: 10px 0px;
+  margin: 10px 0px 0px 0px;
   font-size: 1.35em;
+}
+
+.github-url {
+  font-size: .75em;
+  margin-bottom: 10px;
 }
 
 .fa-cogs {
@@ -848,9 +854,17 @@ body {
   top: 1em;
   right: 2em;
   cursor: pointer;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: gray;
   transition: color .35s ease-in;
+  background-color: lightgrey;
+  opacity: .7;
+  display: block;
+  height: 5vh;
+  width: 5vh;
+  line-height: 2.5vh;
+  padding: 1vh;
+  border-radius: 45px;
 }
 
 .top_form .top_form_close:hover {

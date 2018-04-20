@@ -27,12 +27,45 @@ class App extends Component {
     }
   }
   componentDidMount(){
+    let subtitle = this.state.subtitle;
+    const $ = jquery;
+    setTimeout(()=>{
+      this.addLetter(0);
+    },750);
 
-  let subtitle = this.state.subtitle;
-  setTimeout(()=>{
-    this.addLetter(0);
-  },750);
-
+    // jquery code to change color of project font after user scrolls
+    // console.log('height of page: ',jquery('html').height())
+    // let project_height = jquery('html').height();
+    // let projects = $('.portfolio-entry');
+    // $(window).scroll(()=>{
+    //   if($(window).scrollTop()>project_height/2){
+    //     projects.animate(
+    //       {
+    //         height:'800px'
+    //         // color:'#494b71'
+    //       },
+    //       500,()=>{
+    //       console.log('done')
+    //     });
+    //   }else if($(window).scrollTop()<project_height/2){
+    //     projects.animate(
+    //       {
+    //         color:'#e6b55e'
+    //       },
+    //       500,()=>{
+    //       console.log('done')
+    //     });
+    //   }
+    // })
+    // console.log('projects are ',projects.each((i)=>{
+    //   console.log(projects[i]);
+    // }))
+    // $.each(projects,(i,project)=>{
+    //   const dist = $(project).offset().top;
+    //   if(dist>project_height/2){
+    //     $(project).css('color','#494b71');
+    //   }
+    // })
   }
   addLetter(index,subtitle){
     let full = 'Web Developer | Designer ';

@@ -30,6 +30,7 @@ $expand_speed:1s;
 }
 .showing{
   display:block;
+  -webkit-transition: all $expand_speed;
   transition: all $expand_speed;
 }
 .photo_inner{
