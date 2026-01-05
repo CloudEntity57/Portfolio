@@ -1,126 +1,127 @@
-import React, { Component } from 'react';
-import jquery from 'jquery';
+import React, { useEffect, useRef } from 'react';
+import $ from 'jquery';
 
-class Circle extends Component{
-  componentDidMount(){
-    // const expanding = this.props.expanding;
-    // console.log('expanding ',this.props.brand,': ',expanding);
-    // if(expanding==true){
-    //   this.openLens();
-    // }else{
-    //   this.closeLens();
-    // // }
-    // const id = '#'+this.props.brand+'1';
-    // const $photo = jquery(id);
-    // setTimeout(()=>{
-    //   $photo.addClass('showing');
-    //   setTimeout(()=>{
-    //     this.openLens();
-    //   },750)
-    // },750);
-  }
-  componentWillReceiveProps(nextProps){
-    const expanding = nextProps.expanding;
-    // console.log('expanding ',this.props.brand,': ',expanding);
-    if(expanding==true){
-      this.show();
-      this.openLens();
-    }else{
-      this.closeLens();
-    }
-    const lens = nextProps.lens;
-    if(lens==false){
-      jquery('.circle div:nth-child(1)').css('color','#fff');
-      const id = '#'+this.props.brand+'1';
-      const $photo = jquery('.photo');
-      const $lens1 = $photo.children('.lens1');
-      const $lens2 = $photo.children('.lens2');
-      const $lens3 = $photo.children('.lens3');
-      const $lens4 = $photo.children('.lens4');
-      $lens1.addClass('left');
-      $lens4.addClass('left');
-      $lens2.addClass('right');
-      $lens3.addClass('right');
-    }
-  }
-  show(){
-    const id = '#'+this.props.brand+'1';
-    const $photo = jquery(id);
-    $photo.addClass('showing');
-    setTimeout(()=>{
-      this.closeLens();
-      const brand_class = '.'+this.props.brand;
-      jquery(brand_class).addClass('raised');
-    },600);
-  }
-  openLens(e){
-    const id = '#'+this.props.brand+'1';
-    const $photo = jquery(id);
+const Circle = ({ brand, expanding, lens, url = "../photos/react-logo-1000-transparent.png", clearInterval }) => {
+  const brandId = `${brand}1`;
+  const brandClass = `covered brand_title ${brand}`;
+  const photoRef = useRef(null);
+
+  const openLens = () => {
+    const $photo = $(photoRef.current);
     const $lens1 = $photo.children('.lens1');
     const $lens2 = $photo.children('.lens2');
     const $lens3 = $photo.children('.lens3');
     const $lens4 = $photo.children('.lens4');
-    const brand_class = '.'+this.props.brand;
+    const brandSelector = `.${brand}`;
+
     $photo.addClass('bigger');
     $lens1.addClass('left');
     $lens4.addClass('left');
     $lens2.addClass('right');
     $lens3.addClass('right');
-    jquery(brand_class).addClass('raised');
+    $(brandSelector).addClass('raised');
+  };
 
-  }
-  closeLens(e){
-    const id = '#'+this.props.brand+'1';
-    const $photo = jquery(id);
+  const closeLens = () => {
+    const $photo = $(photoRef.current);
     const $lens1 = $photo.children('.lens1');
     const $lens2 = $photo.children('.lens2');
     const $lens3 = $photo.children('.lens3');
     const $lens4 = $photo.children('.lens4');
-    const brand_class = '.'+this.props.brand;
-    // setTimeout(()=>{
-    //   jquery(brand_class).removeClass('raised');
-    // },425)
+
     $photo.removeClass('bigger');
-    if(this.props.lens==true){
+
+    if (lens === true) {
       $lens1.removeClass('left');
       $lens4.removeClass('left');
       $lens2.removeClass('right');
       $lens3.removeClass('right');
     }
-  }
-  clearPromise(e){
-    return new Promise((resolve)=>{
-      const result = this.props.clearInterval();
-      resolve(result);
-    })
-  }
-  openLensTrigger(e){
-    this.openLens(e);
-    // this.clearPromise().then((result)=>{;
-    //   this.openLens(e);
-    //   // this.props.clearColors();
-    // });
-  }
+  };
 
-  render(){
-    const url = this.props.url || "../photos/react-logo-1000-transparent.png";
-    const brand_class = "covered brand_title "+this.props.brand;
-    const brand_id = this.props.brand+'1';
-    return(
-      <div className="circle clearfix">
-        <div className={ brand_class }>{this.props.brand}</div>
-        <div className="circle_holder clearfix">
-          <div onMouseEnter={this.openLensTrigger.bind(this)} onMouseLeave={this.closeLens.bind(this)} id={brand_id} className="photo photo_inner">
-            <img src={url} alt="brand_logo" className="brand_logo img-responsive" />
-            <div className="lens1"></div>
-            <div className="lens2"></div>
-            <div className="lens3"></div>
-            <div className="lens4"></div>
-          </div>
+  const show = () => {
+    const $photo = $(photoRef.current);
+    $photo.addClass('showing');
+
+    setTimeout(() => {
+      closeLens();
+      $(`.${brand}`).addClass('raised');
+    }, 600);
+  };
+
+  const clearPromise = () => {
+    return new Promise((resolve) => {
+      const result = clearInterval();
+      resolve(result);
+    });
+  };
+
+  const openLensTrigger = () => {
+    console.log('opening lens')
+    openLens();
+    // Uncomment below if needed:
+    // clearPromise().then(() => {
+    //   openLens();
+    // });
+  };
+
+  useEffect(() => {
+    // Replaces componentDidMount
+
+    const $photo = $(photoRef.current);
+    setTimeout(() => {
+      $photo.addClass('showing');
+      setTimeout(() => {
+        openLens();
+      }, 10);
+    }, 10);
+  }, []);
+
+  useEffect(() => {
+    // Replaces componentWillReceiveProps
+    if (expanding === true) {
+      show();
+      openLens();
+    } else {
+      closeLens();
+    };
+
+    if (lens === false) {
+      $('.circle div:nth-child(1)').css('color', '#fff');
+      const $photo = $(photoRef.current);
+      const $lens1 = $photo.children('.lens1');
+      const $lens2 = $photo.children('.lens2');
+      const $lens3 = $photo.children('.lens3');
+      const $lens4 = $photo.children('.lens4');
+
+      $lens1.addClass('left');
+      $lens4.addClass('left');
+      $lens2.addClass('right');
+      $lens3.addClass('right');
+    }
+  }, [expanding, lens]);
+
+  return (
+    <div className="circle clearfix">
+      <div className={brandClass}>{brand}</div>
+      <div className="circle_holder clearfix">
+        <div
+          ref={photoRef}
+          id={brandId}
+          className="photo photo_inner"
+          onMouseEnter={() => openLensTrigger()}
+          onMouseLeave={() => closeLens() }
+        >
+          <img src={url} alt="brand_logo" className="brand_logo img-responsive" />
+          <div className="lens1"></div>
+          <div className="lens2"></div>
+          <div className="lens3"></div>
+          <div className="lens4"></div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
 
 export default Circle;

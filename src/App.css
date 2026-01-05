@@ -1,3 +1,4 @@
+
 .port_photo {
   border-radius: 100%;
   position: relative;
@@ -380,6 +381,14 @@ main {
   .lead.col-sm-12 {
     margin-top: 5vh;
   }
+}
+
+.title-bkg{
+  height: 100vh;
+    background-image: url("http://res.cloudinary.com/middle-renaissance-realty-llc/image/upload/c_scale,w_600/v1508174464/IMG_8200_pcg9nh.jpg");
+    background-size: cover;
+    background-position: -15vw 0vh;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {

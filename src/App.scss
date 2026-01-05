@@ -1,6 +1,6 @@
-@import "portal";
+@use "_portal" as *;
 //CIRCLE
-@import "circle";
+@use "_circle" as *;
 // @import "circle3";
 
 // existing styles
@@ -303,7 +303,7 @@ body{
   border-radius:50px;
   cursor: pointer !important;
 }
-.links,.contact,{
+.links,.contact{
     // border-bottom: 3px solid darkgrey;
     margin-bottom:15px;
 }

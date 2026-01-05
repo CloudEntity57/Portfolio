@@ -1,22 +1,35 @@
 {
   "name": "Portfolio_2017",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "devDependencies": {
-    "babel-preset-env": "^1.6.0",
-    "react-scripts": "1.0.14"
-  },
-  "dependencies": {
-    "firebase": "^4.5.0",
-    "gh-pages": "^1.0.0",
-    "jquery": "^3.2.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "babel-preset-env": "^1.7.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "firebase": "^12.0.0",
+    "gh-pages": "^6.3.0",
+    "jquery": "^3.7.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sass": "^1.90.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
